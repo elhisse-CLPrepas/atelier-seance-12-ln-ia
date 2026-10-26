@@ -76,3 +76,7 @@ Le workflow `.github/workflows/deploy-pages.yml` est prêt. Quand le dépôt ser
 ## Reprise du 26 octobre 2026
 
 Installation npm, check, 8 tests, build Vite et génération autonome réussis sur Windows. Le fichier package-lock.json est désormais inclus pour reproduire les dépendances. Les réserves d’installation ci-dessus décrivent la préparation historique du pack. La recette visuelle de la version corrigée reste incomplète ; voir docs/JOURNAL-QUALITE.md. Versionnement sur atelier-s12-audit pour relecture, sans déploiement Pages.
+
+## Affiches du Module 03
+
+Les cinq affiches Automne 2026 fournies dans `affiches/` sont intégrées à l’accueil, au volet de rappel S09–S11 de l’atelier, au portfolio et à la galerie Ressources. Chaque affiche peut être agrandie et téléchargée. Les copies optimisées sont embarquées dans la version autonome ; les PNG fournis restent intacts. Voir `docs/PROVENANCE.md` pour leur répartition et la mention d’horaire de S11.

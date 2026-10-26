@@ -14,3 +14,8 @@ for(const file of ['index.html','src/main.js','src/style.css','prompts/PROMPT-MA
 const js=fs.readFileSync('src/main.js','utf8');
 for(const label of ['guide-pratique-v1.md','guide-pratique-v2-a-relire.md','grille-relecture-s12.md','preuve-seance-12.md','bilan-module-03.md'])assert(js.includes(label),`export ${label}`);
 console.log('Vérification S12 : 22 slides, 4 démos, 12 flashcards, 10 questions, 10 critères, exports OK');
+
+for (const id of ['module-03','s09','s10','s11','s12']) {
+ assert(fs.existsSync(`public/assets/affiches/${id}.webp`),`affiche ${id}`);
+ assert(js.includes(`./assets/affiches/${id}.webp`),`référence affiche ${id}`);
+}

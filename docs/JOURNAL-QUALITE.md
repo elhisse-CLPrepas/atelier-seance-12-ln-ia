@@ -1,3 +1,14 @@
+# Intégration des affiches — 26 octobre 2026
+
+- Cinq images originales inspectées visuellement ; édition Automne 2026, séances et chemins identifiés. Sources PNG conservées ; cinq copies WebP à dimensions constantes, 1 772 758 octets au total.
+- Répartition : accueil Module 03/S12 ; rappel S09/S10/S11 dépliable dans l’atelier ; Module 03 au portfolio ; collection complète dans Ressources. Affiches non recadrées, une colonne sur petit écran, liens d’agrandissement et téléchargement, textes alternatifs et légendes.
+- Tests réels : npm.cmd run check réussi ; npm.cmd test 8/8 ; npm.cmd run build réussi ; npm.cmd run standalone réussi. Effectifs 22/4/12/10/10 conservés. Contrôle statique des cinq fichiers et de leur embarquement dans l’autonome.
+- Limites : pas de nouvelle recette interactive Chrome bureau/mobile ni de nouvelle capture de page réalisée pour cette modification. Les captures précédentes sont historiques. La lisibilité du texte des affiches sur mobile nécessite l’agrandissement ; les légendes HTML donnent le sujet et l’objectif.
+- Les liens embarqués de l’autonome sont convertis en URL Blob au clic, pour éviter les restrictions de navigation vers les URL data. Ce comportement reste à confirmer en recette navigateur.
+- La publication Pages précédente correspond au commit b74dfcb (run 40373158740 réussi). La présente mise à jour doit être suivie jusqu’au résultat du nouveau workflow avant d’annoncer sa disponibilité en ligne.
+
+---
+
 # Reprise d’audit — 26 octobre 2026
 
 Les résultats historiques du pack sont conservés plus bas. Ils ne prouvent pas la recette de la version corrigée.

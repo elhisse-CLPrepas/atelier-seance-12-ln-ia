@@ -9,3 +9,11 @@
 - **Quatre démonstrations** : le 4e cas est adapté de l’exemple 10 des sources de l'été ; les trois autres sont des cas fictifs pédagogiques de continuité avec S11. Aucun résultat ne provient d’un vrai participant.
 - **Design** : logo fourni ; aucun visuel d’été présenté comme affiche Automne 2026. Affiches à intégrer plus tard, après contrôle humain.
 - **GitHub** : S09–S11 repérés par leurs dépôts ; S12 non trouvé lors de la consultation du 25 octobre 2026. Aucun dépôt distant créé ni push effectué.
+
+## Affiches intégrées — 26 octobre 2026
+
+Cinq PNG fournis par le pilote dans `affiches/`, édition Relance Automne 2026, inspectés visuellement : Module 03, note de cadrage S09, fiche projet S10, plan S11 et guide S12. Ces sources sont conservées sans modification. Des copies WebP (qualité 90, dimensions originales 1122 × 1402) sont servies dans `public/assets/affiches/` et embarquées dans l’HTML autonome.
+
+Répartition : accueil (Module 03 et S12), atelier (S09–S11 dans un volet dépliable avant les imports), portfolio (Module 03), ressources (collection des cinq affiches). Aucun ajout aux 22 diapositives. Liens pour voir en grand et télécharger, textes alternatifs et légendes textuelles. L’affiche S11 indique 19h00 GMT : cette mention est conservée et signalée ; S12 reste annoncé à 19h00 Maroc. Les visuels sont des repères pédagogiques et ne valent pas validation d’une production.
+
+Les mentions antérieures « affiches à intégrer plus tard » décrivent l’état initial du pack. Cette livraison les remplace pour les cinq visuels fournis ; les affiches historiques d’été restent dans le ZIP inchangé.

@@ -10,6 +10,9 @@ main=(root/'src/main.js').read_text(encoding='utf-8').replace("import { DATA } f
 logo=(root/'public/assets/logo-ln-ia.webp').read_bytes()
 uri='data:image/webp;base64,'+base64.b64encode(logo).decode('ascii')
 main=main.replace('./assets/logo-ln-ia.webp',uri)
+for poster in sorted((root/'public/assets/affiches').glob('*.webp')):
+    embedded='data:image/webp;base64,'+base64.b64encode(poster.read_bytes()).decode('ascii')
+    main=main.replace('./assets/affiches/'+poster.name,embedded)
 html=html.replace('<link rel="icon" href="./assets/logo-ln-ia.webp">','')
 html=html.replace('<link rel="stylesheet" href="./src/style.css">','<style>'+css+'</style>')
 html=html.replace('<script type="module" src="./src/main.js"></script>','<script>'+data+'\n'+main+'</script>')
