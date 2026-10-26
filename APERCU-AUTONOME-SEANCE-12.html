@@ -1,0 +1,660 @@
+<!doctype html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b2341"><meta name="description" content="LN-IA — Séance 12, atelier pratique de production de guide V1 et correction V2, Module 03, Challenge 100 Jours Automne 2026"><title>LN-IA · Séance 12 — Aperçu autonome</title><style>:root{--night:#07152b;--navy:#0b2341;--blue:#16496d;--royal:#1a5e87;--gold:#cf9e47;--gold2:#f1d18c;--ink:#1b304b;--muted:#586e80;--paper:#f7f9fb;--surface:#ffffff;--border:#dce5eb;--glow:rgba(234,187,95,.22);font-family:Inter,'Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px}button,input,textarea{font:inherit}button{cursor:pointer}a{color:#215e82}a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #43b8eb;outline-offset:3px}img{max-width:100%}h1,h2,h3,p{margin-top:0}p{line-height:1.6}h1{letter-spacing:-.04em;font-size:clamp(2.1rem,4.1vw,3.5rem);line-height:1.12}h2{letter-spacing:-.025em}small{font-size:.8rem}code{font-family:Consolas,monospace}
+.layout{min-height:100vh;display:grid;grid-template-columns:254px minmax(0,1fr)}.sidebar{background:linear-gradient(155deg,#071226,#0b2a4a);color:#e4edf6;min-height:100vh;position:sticky;top:0;height:100vh;padding:23px 17px;display:flex;flex-direction:column;border-right:1px solid #0d3b5a;z-index:20}.brand{display:flex;align-items:center;gap:10px;padding:6px 3px 26px;border-bottom:1px solid #38546b}.brand img{width:78px;height:49px;object-fit:contain;border-radius:8px;background:#fff}.brand b{font-size:.82rem;color:#f2ca7b;letter-spacing:.03em;line-height:1.3}.brand small{display:block;color:#a4bfd1;font-size:.66rem;line-height:1.5;margin-top:4px}.sidebar nav{padding:24px 0;display:grid;gap:4px;overflow-y:auto}.navitem{display:flex;gap:13px;align-items:center;padding:11px 13px;color:#d6e2eb;border:1px solid transparent;border-radius:10px;text-decoration:none;font-size:.92rem;font-weight:650}.navitem span{font-size:1.12rem;color:#b6c9d9;width:21px;text-align:center}.navitem:hover,.navitem.active{background:#1c4060;border-color:#376080;color:#fff}.navitem.active{box-shadow:inset 3px 0 0 #eac06e}.navitem.active span{color:#eac06e}.side-footer{margin-top:auto;padding:15px 9px;border-top:1px solid #38546b;font-size:.73rem;color:#c2d4e1;line-height:1.9}.side-footer strong{color:var(--gold2)}.pill{display:inline-flex;padding:7px 11px;border:1px solid #d0b173;color:#886521;border-radius:999px;font-size:.78rem;font-weight:800;letter-spacing:.03em}.pill.muted{color:#f7d995;background:#172d42;border-color:#896c36;font-size:.65rem}.workspace{min-width:0}.topbar{background:white;min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid var(--border);padding:0 clamp(18px,3vw,45px)}.mark{font-size:1.3rem;font-weight:900;color:var(--navy)}.mark small{display:inline-block;margin-left:12px;color:#a27329;font-size:.63rem;letter-spacing:.11em}.gold-pill{display:inline-flex;background:#fbf0d6;color:#8a601d;border-radius:999px;padding:9px 15px;font-size:.78rem;font-weight:800}.iconbtn{display:none;border:0;background:#f1f5f9;padding:9px 13px;border-radius:8px;color:var(--navy)}.page{max-width:1330px;margin:0 auto;padding:34px clamp(19px,4vw,56px) 70px}.footer{padding:23px 40px;display:flex;flex-wrap:wrap;justify-content:space-between;border-top:1px solid var(--border);font-size:.8rem;color:#61788a}.footer span{color:#9c712e}.eyebrow{display:block;font-weight:850;letter-spacing:.16em;font-size:.72rem;color:#b18130;text-transform:uppercase;margin-bottom:13px}.section-head{margin-bottom:30px;max-width:920px}.section-head p{color:var(--muted);font-size:1.07rem}.section-head h1{margin-bottom:13px}.btn{border:1px solid #cddae3;background:#fff;color:#173a56;font-size:.87rem;font-weight:800;border-radius:9px;padding:11px 16px;text-align:center;display:inline-flex;justify-content:center;align-items:center;text-decoration:none;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-1px);background:#f3f7fa}.btn.primary{color:#07152b;background:linear-gradient(120deg,#eac575,#c99742);border-color:#bb832d}.btn.light{border-color:#6b96ad;color:#fff;background:#204764}.hero{min-height:460px;display:grid;grid-template-columns:1.18fr .82fr;gap:20px;align-items:center;border-radius:20px;color:white;overflow:hidden;padding:clamp(25px,4vw,60px);background:radial-gradient(circle at 90% 35%,rgba(34,124,171,.34),transparent 36%),linear-gradient(120deg,#07152c,#0e3656 64%,#0c2443);position:relative;box-shadow:0 23px 46px rgba(6,29,53,.13)}.hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(125deg,transparent 0,transparent 39px,rgba(44,147,211,.06) 40px,transparent 41px);pointer-events:none}.hero-text{position:relative;z-index:1}.hero-kicker{display:inline-block;font-size:.75rem;letter-spacing:.11em;border:1px solid rgba(236,196,109,.55);color:#e9c474;border-radius:100px;padding:8px 14px;margin-bottom:25px;font-weight:800}.hero h1{font-size:clamp(2.65rem,5vw,4.7rem);max-width:650px;line-height:1.07}.hero h1 em{font-style:normal;color:#eecb87}.hero-text>p{font-size:1.08rem;color:#dfedf5;max-width:640px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:29px 0}.hero-meta{font-size:.77rem;color:#afc8d9}.hero-art{height:345px;display:flex;align-items:center;justify-content:center;position:relative;transform:rotate(-4deg)}.hero-art::before{content:'';position:absolute;inset:23% 7%;background:radial-gradient(circle,rgba(0,173,255,.25),transparent 60%);border:1px solid rgba(44,189,243,.25);border-radius:50%;transform:rotateX(55deg);box-shadow:0 0 60px #17608b}.art-front,.art-back{border:2px solid #b99155;background:linear-gradient(132deg,#1c4260,#092441 70%);box-shadow:15px 16px 0 #071c32,0 10px 40px rgba(0,0,0,.2);padding:31px 25px;color:white;border-radius:9px;position:absolute;width:225px;min-height:290px}.art-back{transform:translate(54px,-13px) rotate(11deg);background:linear-gradient(130deg,#e2e8e7,#abbfc9);color:#11324b;text-align:right}.art-front b{display:block;font-size:1.2rem;color:#f4d596;margin-bottom:21px;line-height:1.3}.art-front span{display:block;border-bottom:1px solid rgba(255,255,255,.2);padding:7px 0;font-size:.77rem}.art-front strong{display:block;text-align:center;color:#f3cb79;margin-top:16px}.stats{display:grid;grid-template-columns:repeat(4,1fr);background:white;margin-top:20px;border-radius:13px;border:1px solid var(--border);box-shadow:0 9px 23px rgba(20,55,79,.04)}.stats>div{padding:23px;text-align:center;border-right:1px solid var(--border)}.stats>div:last-child{border:0}.stats strong{display:block;font-size:1.95rem;color:#ac7928}.stats span{font-size:.76rem;color:#637a8d;font-weight:650}.content-block{padding:35px 0}.content-block>h2{font-size:1.65rem;margin-bottom:22px}.progression{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.prog{padding:20px;background:#eaf0f5;border-radius:12px;border:1px solid #d8e3eb}.prog.focus{background:#0e3554;color:white;border-color:#a8894b}.prog span{display:block;color:#a9782d;font-size:.8rem;font-weight:800;margin-bottom:8px}.prog b{font-size:.92rem}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}.panel{background:white;border:1px solid var(--border);border-radius:13px;padding:25px;box-shadow:0 6px 19px rgba(24,63,95,.035);min-width:0}.panel h2{font-size:1.25rem;margin-bottom:15px;color:#122f4b}.panel p,.panel li{color:#52697d}.panel ul{padding-left:21px;line-height:1.85}.panel.outline{border-color:#d7ba7a;background:#fbfcff}.panel blockquote{font-size:1.3rem;font-weight:800;line-height:1.5;color:#113d5c;margin:0 0 15px}.panel .small{font-size:.84rem;color:#758393}.text-link{font-weight:800;text-decoration:none}.checklist-simple{list-style:'✓   ';padding-left:19px}.notice{background:#e9f2f7;color:#2d576a;border:1px solid #c5dde9;border-radius:11px;padding:16px 20px;display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;align-items:center;margin:18px 0}.notice b,.notice strong{color:#175178}.notice span{font-size:.88rem}.note{background:#fff8e9;border-left:4px solid #d6a150;padding:13px 18px;border-radius:5px;color:#715b34;margin-top:18px;font-size:.86rem}.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.method{border-radius:12px;padding:22px;background:#fff;border:1px solid var(--border)}.method b{color:#a87228;font-size:1.3rem}.method h3{color:#0e3657;margin:12px 0}.method p{font-size:.84rem;color:#637688}.slide-controls{display:flex;gap:13px;align-items:center;flex-wrap:wrap;margin-bottom:13px}.slide-progress{height:7px;flex:1;min-width:80px;background:#e3eaf0;border-radius:10px;overflow:hidden}.slide-progress i{display:block;height:100%;background:#c89749;transition:width .2s}.slide{aspect-ratio:16/9;min-height:470px;background:radial-gradient(circle at 94% 10%,rgba(32,115,166,.44),transparent 40%),linear-gradient(137deg,#061327,#0b3255);border:5px solid #103553;color:#fff;border-radius:15px;padding:clamp(21px,4.5vw,53px);display:flex;flex-direction:column;box-shadow:0 13px 32px rgba(17,39,65,.18);position:relative;overflow:hidden}.slide:before{content:'';position:absolute;inset:12px;border:1px solid rgba(215,175,90,.26);border-radius:8px;pointer-events:none}.slide-upper{display:flex;justify-content:space-between;gap:20px;z-index:1}.slide h2{font-size:clamp(1.8rem,3.7vw,3.9rem);max-width:840px;line-height:1.13;color:#f7dfab;margin-bottom:17px}.slide-description{font-size:clamp(.85rem,1.35vw,1.2rem);color:#d8e8f0;max-width:830px}.slide-symbol{color:rgba(237,201,126,.18);font-size:clamp(5rem,9vw,9rem);font-weight:900}.slide-card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:auto;z-index:1}.slide-card{border:1px solid #356187;background:rgba(7,31,56,.84);border-radius:11px;padding:15px 21px;min-height:80px;display:flex;align-items:center;gap:18px}.slide-card span{font-size:1.8rem;font-weight:900;color:#e8c17b}.slide-card p{margin:0;color:#e9f0f6;font-size:.98rem}.slide-bottom{display:flex;justify-content:space-between;gap:10px;border-top:1px solid rgba(213,180,106,.4);margin-top:22px;padding-top:14px;color:#edcd86;font-weight:800;font-size:.66rem;letter-spacing:.1em;z-index:1}.speaker-note{margin-top:15px;border:1px solid #bcd8ea;background:#eaf5fa;padding:17px 22px;border-radius:12px;color:#2c5c76}.pager{display:flex;justify-content:space-between;gap:10px;margin-top:19px;flex-wrap:wrap}.slide-dots{display:flex;gap:5px;flex-wrap:wrap;margin-top:16px}.slide-dots button{height:9px;width:14px;border:0;border-radius:10px;background:#c4d3dc}.slide-dots button.on{background:#b9832b;width:28px}#slideDeck:fullscreen{border-radius:0;aspect-ratio:auto;padding:5vw;min-height:100vh}
+.demo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.tag{color:#a4752a;font-size:.72rem;font-weight:850;letter-spacing:.08em}.demo-steps{margin:20px 0;display:grid;gap:10px}.demo-steps>div{background:#f2f6f9;border-radius:9px;border-left:4px solid #c99b4c;padding:12px 15px}.demo-steps p{font-size:.84rem;margin:5px 0}.demo-steps small{color:#4f7493}.demo-card small{color:#7a8c9a}.import-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:15px}.import{display:flex;flex-direction:column;gap:7px;background:#f4f7f9;padding:16px;border-radius:9px;border:1px solid #dce6ec}.import span{font-weight:850;color:#164161}.import small{color:#6b8697}.import input{max-width:100%;font-size:.75rem}.fields-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field{display:flex;flex-direction:column;margin:13px 0;gap:7px;min-width:0}.field span{font-size:.84rem;font-weight:800;color:#1a4564}.field textarea{width:100%;min-height:75px;border-radius:9px;padding:12px 13px;border:1px solid #c9d6dd;background:#fbfcfe;color:#1b354a;font-size:.9rem;line-height:1.48;resize:vertical}.field textarea:focus{border-color:#5195ba}details{margin:15px 0;border:1px solid #d6e1e8;padding:12px 16px;border-radius:8px}summary{cursor:pointer;font-weight:780;color:#23536d}.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step-editor{background:#f4f7fa;border:1px solid var(--border);padding:18px;border-radius:11px}.step-editor h3{margin:0 0 13px;color:#ad792c}.editor-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.preview-block{margin-top:20px;border:1px solid #d6e3eb;border-radius:10px;overflow:hidden}.preview-head{background:#0b3452;color:white;display:flex;justify-content:space-between;padding:13px 17px;gap:10px}.preview-head span{color:#f1cc7b;font-size:.8rem}.preview-block pre,.file-tree{margin:0;background:#f3f6f9;color:#1b3247;padding:20px;white-space:pre-wrap;word-break:break-word;max-height:440px;overflow:auto;font-family:Consolas,Monaco,monospace;font-size:.81rem;line-height:1.6}.revision{margin-top:26px;border-color:#d9ba79}.checkboxline,.checkitem{display:flex;align-items:flex-start;gap:12px;color:#2e526c;line-height:1.5}.checkboxline{padding:14px;background:#f7f4e9;border-radius:9px;margin-top:13px}.checkboxline input,.checkitem input{width:19px;height:19px;accent-color:#a5782d;flex-shrink:0}.prompt-list{display:grid;gap:15px}.prompt-card pre{white-space:pre-wrap;word-break:break-word;max-height:350px;overflow:auto;background:#f2f6f9;color:#173a55;border-radius:9px;padding:17px;font-size:.8rem;line-height:1.6}.flexline{display:flex;justify-content:space-between;gap:15px;align-items:center}.flash-area{max-width:790px;margin:40px auto;text-align:center}.flash-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;background:radial-gradient(circle at 100% 0%,#174b73,#082644 85%);border:2px solid #ba904a;color:white;border-radius:23px;padding:48px;min-height:360px;width:100%;box-shadow:0 20px 40px #0b263626}.flash-card strong{font-size:clamp(1.3rem,3vw,2rem);line-height:1.5;max-width:650px}.flash-card small{color:#aac8da}.flash-card .eyebrow{color:#f0cb80}.quiz-list{display:grid;gap:15px}.quiz-question{margin:0;min-width:0}.quiz-question legend{font-size:1.03rem;font-weight:750;padding:8px 4px;color:#193f5a}.quiz-question legend b{color:#b2853c}.quiz-option{display:flex;gap:10px;padding:9px;background:#f8fafb;border-radius:7px;margin-bottom:7px;color:#244963;cursor:pointer}.quiz-option input{accent-color:#a8772d}.answer{margin:10px 0 0;border-left:4px solid #a97730;padding:11px 14px;background:#f5f1e5;border-radius:5px}.answer.correct{background:#eaf4ec;border-color:#3d9b67}.checkitem{margin:0;border-bottom:1px solid #e6edf0;padding:14px 8px}.resource-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-bottom:25px}.resource{text-decoration:none;transition:transform .2s}.resource:hover{transform:translateY(-2px)}.resource small{overflow-wrap:anywhere;color:#63869b}#message{position:fixed;bottom:21px;right:23px;z-index:40;border:1px solid #bbd5df;max-width:min(570px,calc(100vw - 35px));padding:14px 18px;border-radius:11px;color:#1c4f69;background:#f0fbff;box-shadow:0 12px 35px #0f2a3d28;font-size:.87rem}
+@media(max-width:1100px){.method-grid{grid-template-columns:repeat(2,1fr)}.step-grid{grid-template-columns:1fr}.hero{grid-template-columns:1fr .65fr}.slide{aspect-ratio:auto}.slide-card-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.sidebar{position:fixed;top:0;left:0;width:260px;transform:translateX(-105%);transition:transform .2s;box-shadow:0 0 40px #04172988}.sidebar.open{transform:translateX(0)}.iconbtn{display:block}.topbar{padding:0 19px}.hero{grid-template-columns:1fr}.hero-art{min-height:260px;height:275px}.page{padding:24px 18px 55px}.progression{grid-template-columns:repeat(2,1fr)}.twocol,.demo-grid,.resource-grid{grid-template-columns:1fr}.import-grid{grid-template-columns:1fr}.fields-grid{grid-template-columns:1fr}.hero-text>h1{font-size:clamp(2.3rem,8vw,4rem)}.slide-upper{flex-direction:column}.slide-symbol{display:none}.slide-card-grid{grid-template-columns:1fr}.slide-card{min-height:45px}.slide-card p{font-size:.87rem}.slide{min-height:610px}.slide h2{font-size:clamp(1.7rem,5vw,2.6rem)}}
+@media(max-width:460px){.stats{grid-template-columns:repeat(2,1fr)}.stats>div:nth-child(2){border-right:0}.stats>div:nth-child(-n+2){border-bottom:1px solid var(--border)}.gold-pill{font-size:.68rem;padding:7px}.mark small{display:none}.method-grid{grid-template-columns:1fr}.slide{padding:20px;min-height:600px}.slide-card{padding:10px}.slide-card span{font-size:1.15rem}.hero{padding:25px}.hero-art{height:245px}.art-front,.art-back{width:192px;min-height:240px}.footer{padding:19px;font-size:.74rem;gap:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:after,*:before{animation:none!important;transition:none!important}}@media print{.sidebar,.topbar,.footer,.slide-controls,.pager,.slide-dots,.hero-actions,.editor-actions,#message{display:none!important}.layout{display:block}.page{padding:8mm!important;max-width:100%}.slide{break-inside:avoid;border-radius:0;box-shadow:none;print-color-adjust:exact}}
+</style></head><body><div id="app"></div><script>const DATA = {
+  "slides": [
+    {
+      "num": 1,
+      "axis": "Ouverture",
+      "title": "Du plan au guide pratique V1",
+      "description": "Aujourd’hui nous transformons un plan S11 relu en guide court et utilisable.",
+      "points": [
+        "Plan S11 = architecture",
+        "S12 = instructions concrètes",
+        "V1 = document relu à améliorer",
+        "V2 = corrections humaines traçables"
+      ],
+      "note": "Demander à chacun de montrer son plan S11."
+    },
+    {
+      "num": 2,
+      "axis": "Continuité",
+      "title": "Quatre séances, un dossier professionnel",
+      "description": "La même idée progresse avec des documents complémentaires.",
+      "points": [
+        "S09 : note de cadrage courte",
+        "S10 : fiche projet V1",
+        "S11 : plan du guide",
+        "S12 : guide V1, V2 et preuve"
+      ],
+      "note": "Faire nommer les fichiers déjà produits."
+    },
+    {
+      "num": 3,
+      "axis": "Prérequis",
+      "title": "Les documents indispensables",
+      "description": "Le guide ne doit pas partir d’une consigne vague.",
+      "points": [
+        "Relire la note de cadrage S09",
+        "Utiliser la fiche projet S10",
+        "Importer le plan S11 relu",
+        "Identifier public, résultat et partie prioritaire"
+      ],
+      "note": "Distinguer prérequis disponibles et informations manquantes."
+    },
+    {
+      "num": 4,
+      "axis": "Mission",
+      "title": "Que doit réussir le lecteur ?",
+      "description": "Un guide pratique donne des actions compréhensibles et vérifiables.",
+      "points": [
+        "Formuler une action observable",
+        "Respecter les besoins du public",
+        "Éviter la théorie sans application",
+        "Prévoir une vérification finale"
+      ],
+      "note": "Faire compléter « Après lecture, mon public saura… »."
+    },
+    {
+      "num": 5,
+      "axis": "Architecture",
+      "title": "Du titre de plan à la consigne",
+      "description": "Un titre indique un thème ; une étape indique quoi faire.",
+      "points": [
+        "Plan : « Préparer son travail »",
+        "Instruction : « Ouvrir le dossier de travail »",
+        "Contrôle : « Vérifier que le fichier est créé »",
+        "Preuve : fichier conservé"
+      ],
+      "note": "Montrer la différence entre titre, action et critère."
+    },
+    {
+      "num": 6,
+      "axis": "Étapes LN-IA",
+      "title": "Méthode de production en huit étapes",
+      "description": "Le contrôle humain accompagne chaque version.",
+      "points": [
+        "Besoin réel → cadrage → prompt",
+        "Production → contrôle humain",
+        "Correction → documentation → preuve",
+        "Validation finale réservée à l’humain"
+      ],
+      "note": "Insister sur l’absence de validation automatique."
+    },
+    {
+      "num": 7,
+      "axis": "Trame",
+      "title": "Les rubriques du guide pratique",
+      "description": "La V1 a une architecture lisible et actionnable.",
+      "points": [
+        "Objectif, public et résultat attendu",
+        "Prérequis adaptés au contexte",
+        "Trois étapes détaillées minimum",
+        "Erreurs, checklist, vérifications, amélioration"
+      ],
+      "note": "Projeter le modèle Markdown fourni."
+    },
+    {
+      "num": 8,
+      "axis": "Étape 1",
+      "title": "Commencer par une action facile",
+      "description": "La première étape doit permettre au lecteur de démarrer.",
+      "points": [
+        "Nommer une action concrète",
+        "Expliquer le matériel ou les fichiers utiles",
+        "Donner des instructions courtes",
+        "Indiquer un résultat observable"
+      ],
+      "note": "Faire réécrire une étape trop vague."
+    },
+    {
+      "num": 9,
+      "axis": "Étape 2",
+      "title": "Faire progresser sans dispersion",
+      "description": "La deuxième étape s’appuie sur la première.",
+      "points": [
+        "Une seule intention par étape",
+        "Numérotation cohérente",
+        "Termes adaptés au public",
+        "Lien explicite avec le résultat"
+      ],
+      "note": "Demander : qu’a déjà réalisé le lecteur ?"
+    },
+    {
+      "num": 10,
+      "axis": "Étape 3",
+      "title": "Obtenir un livrable vérifiable",
+      "description": "Une action terminée laisse un résultat constatable.",
+      "points": [
+        "Résultat concret et contrôlable",
+        "Exemple fictif si nécessaire",
+        "Critère de réussite observable",
+        "Aucune donnée inventée"
+      ],
+      "note": "Comparer un résultat vague et un résultat vérifiable."
+    },
+    {
+      "num": 11,
+      "axis": "Qualité",
+      "title": "Éviter les erreurs fréquentes",
+      "description": "La lecture critique protège le sens du document.",
+      "points": [
+        "Ne pas copier un brouillon IA",
+        "Supprimer les promesses excessives",
+        "Ne pas inventer des procédures",
+        "Respecter la confidentialité"
+      ],
+      "note": "Lire un faux exemple problématique, proposer une correction."
+    },
+    {
+      "num": 12,
+      "axis": "Checklist",
+      "title": "Le lecteur peut-il réussir seul ?",
+      "description": "Le guide est testé depuis le point de vue du public.",
+      "points": [
+        "Étapes réellement réalisables",
+        "Prérequis suffisants",
+        "Contrôles compréhensibles",
+        "Checklist finale courte"
+      ],
+      "note": "Faire jouer le rôle d’un lecteur novice."
+    },
+    {
+      "num": 13,
+      "axis": "Vérification",
+      "title": "Signaler ce qui reste incertain",
+      "description": "Les données absentes sont des points à vérifier, pas des faits inventés.",
+      "points": [
+        "Marquer À VÉRIFIER",
+        "Identifier la source nécessaire",
+        "Réserver la décision à une personne",
+        "Corriger avant diffusion"
+      ],
+      "note": "Demander deux exemples d’informations non vérifiées."
+    },
+    {
+      "num": 14,
+      "axis": "Prompt 1",
+      "title": "Rédiger la V1 avec le plan S11",
+      "description": "Le prompt relie contexte, plan, public, résultat et contraintes.",
+      "points": [
+        "Coller le plan relu",
+        "Préciser le public et le résultat",
+        "Demander des actions numérotées",
+        "Imposer Markdown et points à vérifier"
+      ],
+      "note": "Ouvrir la rubrique Prompts et lire le prompt principal."
+    },
+    {
+      "num": 15,
+      "axis": "Prompt 2",
+      "title": "Simplifier sans changer l’intention",
+      "description": "La longueur n’est pas un indicateur de qualité.",
+      "points": [
+        "Raccourcir phrases et doublons",
+        "Reformuler les instructions abstraites",
+        "Conserver l’objectif du guide",
+        "Lister les modifications"
+      ],
+      "note": "Comparer deux passages avant et après."
+    },
+    {
+      "num": 16,
+      "axis": "Prompt 3",
+      "title": "Contrôler le guide V1",
+      "description": "L’IA aide au diagnostic, mais ne certifie pas la qualité.",
+      "points": [
+        "Vérifier clarté et cohérence",
+        "Contrôler les informations",
+        "Tester l’ordre des étapes",
+        "Décider humainement des corrections"
+      ],
+      "note": "Appliquer la checklist à une démonstration."
+    },
+    {
+      "num": 17,
+      "axis": "Cas fictif 1",
+      "title": "Scolaire : accueillir des élèves",
+      "description": "Un guide fictif facilite une première journée au collège.",
+      "points": [
+        "Public : nouveaux élèves",
+        "Étape 1 : repérer l’accueil",
+        "Étape 2 : retrouver sa salle",
+        "Étape 3 : vérifier son matériel"
+      ],
+      "note": "Faire distinguer hypothèse fictive et procédure réelle."
+    },
+    {
+      "num": 18,
+      "axis": "Cas fictif 2",
+      "title": "Formation : démarrer avec VS Code",
+      "description": "Un guide court aide un formateur débutant.",
+      "points": [
+        "Public : formateurs novices",
+        "Étape 1 : ouvrir un dossier",
+        "Étape 2 : créer un fichier .md",
+        "Étape 3 : enregistrer et vérifier"
+      ],
+      "note": "Tester si chaque étape est actionnable."
+    },
+    {
+      "num": 19,
+      "axis": "Cas fictif 3",
+      "title": "Association : organiser une rencontre",
+      "description": "Un document fictif peut répartir des tâches utiles.",
+      "points": [
+        "Public : bénévoles",
+        "Étape 1 : clarifier le besoin",
+        "Étape 2 : répartir les actions",
+        "Étape 3 : contrôler les préparatifs"
+      ],
+      "note": "Ne pas inventer de noms ni de lieux réels."
+    },
+    {
+      "num": 20,
+      "axis": "Cas fictif 4",
+      "title": "Le rôle de l’humain face à l’IA",
+      "description": "Cas inspiré des supports de l’été : les responsabilités restent humaines.",
+      "points": [
+        "Définir → prompter → relire",
+        "Corriger → assumer le livrable",
+        "Documenter les décisions",
+        "Préserver la validation humaine"
+      ],
+      "note": "Faire lire l’exemple 10 des sources adaptées."
+    },
+    {
+      "num": 21,
+      "axis": "Atelier",
+      "title": "Du formulaire à la V1 et à la V2",
+      "description": "Construire, exporter, corriger et documenter les deux versions.",
+      "points": [
+        "Importer plan S11 en .md/.txt",
+        "Renseigner le guide V1",
+        "Exporter le Markdown et son prompt",
+        "Réviser dans V2 puis conserver les preuves"
+      ],
+      "note": "Faire produire la V1 avant de lancer la V2."
+    },
+    {
+      "num": 22,
+      "axis": "Clôture",
+      "title": "Le livrable prouve la progression",
+      "description": "Le Module 03 s’achève par un dossier cohérent et traçable.",
+      "points": [
+        "Guide V1 à relire",
+        "V2 avec journal de corrections",
+        "Checklist humaine et preuve S12",
+        "Bilan portfolio du Module 03"
+      ],
+      "note": "Demander : qu’avez-vous modifié personnellement ?"
+    }
+  ],
+  "cases": [
+    {
+      "name": "Accueil au collège",
+      "field": "Enseignement · FICTIF",
+      "audience": "Nouveaux élèves du collège",
+      "goal": "Savoir s’orienter et préparer sa première journée.",
+      "prereq": "Un plan simplifié fourni par l’établissement fictif.",
+      "steps": [
+        [
+          "Repérer son point d’accueil",
+          "Consulter le plan fictif et relever le lieu de rendez-vous.",
+          "Le point d’accueil est identifié."
+        ],
+        [
+          "Préparer son itinéraire",
+          "Suivre les indications fictives sans supposer d’accès réel.",
+          "Le trajet peut être décrit."
+        ],
+        [
+          "Vérifier les affaires utiles",
+          "Comparer son matériel avec une liste fournie par le responsable.",
+          "La checklist est complétée."
+        ]
+      ],
+      "errors": "Ne pas supposer des horaires ou règlements réels.",
+      "checklist": "Vérifier l’accueil ; confirmer l’itinéraire ; préparer les affaires.",
+      "verify": "Horaires, plan réel, règles internes : À VÉRIFIER."
+    },
+    {
+      "name": "Premiers pas dans VS Code",
+      "field": "Formation · FICTIF",
+      "audience": "Formateurs débutants en développement",
+      "goal": "Créer et enregistrer une première note Markdown.",
+      "prereq": "VS Code disponible sur un ordinateur de test.",
+      "steps": [
+        [
+          "Ouvrir le dossier",
+          "Dans VS Code, utiliser Fichier > Ouvrir un dossier.",
+          "Le nom du dossier apparaît."
+        ],
+        [
+          "Créer le document",
+          "Créer `exercice.md` et ajouter un titre Markdown.",
+          "Le document contient un titre."
+        ],
+        [
+          "Enregistrer la preuve",
+          "Enregistrer le fichier et vérifier sa présence.",
+          "Le fichier est visible dans l’explorateur."
+        ]
+      ],
+      "errors": "Ne pas confondre dossier et fichier.",
+      "checklist": "Dossier ouvert ; fichier créé ; contenu enregistré.",
+      "verify": "Version de VS Code et droits locaux : À VÉRIFIER."
+    },
+    {
+      "name": "Préparer une rencontre bénévole",
+      "field": "Association · FICTIF",
+      "audience": "Équipe de bénévoles",
+      "goal": "Élaborer une checklist simple pour préparer une rencontre.",
+      "prereq": "Une intention de rencontre et une équipe fictive.",
+      "steps": [
+        [
+          "Clarifier l’objectif",
+          "Écrire en une phrase le but de la rencontre.",
+          "But partagé dans la fiche."
+        ],
+        [
+          "Lister les actions",
+          "Répartir les tâches génériques sans nommer de personnes réelles.",
+          "Liste de tâches préparée."
+        ],
+        [
+          "Contrôler la préparation",
+          "Parcourir chaque tâche et noter le suivi.",
+          "État des tâches visible."
+        ]
+      ],
+      "errors": "Ne pas inventer de budget, lieu ou date confirmée.",
+      "checklist": "But clair ; tâches réparties ; vérifications notées.",
+      "verify": "Autorisations et logistique réelle : À VÉRIFIER."
+    },
+    {
+      "name": "Assumer une production avec l’IA",
+      "field": "Exemple 10 des supports été · PÉDAGOGIQUE",
+      "audience": "Professionnels découvrant l’IA",
+      "goal": "Apprendre à produire et assumer un document aidé par l’IA.",
+      "prereq": "Une production fictive à relire.",
+      "steps": [
+        [
+          "Définir et formuler",
+          "Identifier le public et préparer une consigne claire.",
+          "Objectif et prompt sont conservés."
+        ],
+        [
+          "Relire et corriger",
+          "Contrôler les affirmations, supprimer le superflu et documenter les corrections.",
+          "Journal de corrections renseigné."
+        ],
+        [
+          "Assumer et prouver",
+          "Ranger la version retenue et sa preuve dans le portfolio.",
+          "Livrable et trace sont identifiables."
+        ]
+      ],
+      "errors": "Ne pas assimiler la sortie IA à une validation humaine.",
+      "checklist": "Prompt archivé ; corrections traçables ; statut affiché.",
+      "verify": "Exemples concrets et décision du pilote : À VÉRIFIER."
+    }
+  ],
+  "flashcards": [
+    {
+      "q": "Que reçoit la séance 12 ?",
+      "a": "Un plan S11 relu, une fiche projet S10 et une note S09."
+    },
+    {
+      "q": "Pourquoi rédiger un guide pratique ?",
+      "a": "Pour aider une personne précise à effectuer une action observable."
+    },
+    {
+      "q": "Que signifie V1 ?",
+      "a": "Une première version exploitable à relire, pas un document final validé."
+    },
+    {
+      "q": "À quoi sert la V2 ?",
+      "a": "À matérialiser des corrections réelles après relecture humaine."
+    },
+    {
+      "q": "Qu’est-ce qu’une étape actionnable ?",
+      "a": "Une instruction que le lecteur peut réaliser et vérifier."
+    },
+    {
+      "q": "Pourquoi définir un public ?",
+      "a": "Pour ajuster le niveau de langage, les prérequis et les actions."
+    },
+    {
+      "q": "Quels sont les prérequis ?",
+      "a": "Les savoirs, outils ou documents nécessaires avant l’étape 1."
+    },
+    {
+      "q": "Quand écrire « À VÉRIFIER » ?",
+      "a": "Quand une information nécessaire n’est pas fondée ou confirmée."
+    },
+    {
+      "q": "Que contrôle la checklist ?",
+      "a": "La présence des actions et la possibilité de constater le résultat."
+    },
+    {
+      "q": "L’IA peut-elle valider le guide ?",
+      "a": "Non. Le contrôle et la décision finale appartiennent à l’humain habilité."
+    },
+    {
+      "q": "Quels éléments conserver en portfolio ?",
+      "a": "Le livrable, le prompt, le journal des corrections et le bilan."
+    },
+    {
+      "q": "Quelle différence entre plan et guide ?",
+      "a": "Le plan prévoit les rubriques ; le guide donne les instructions concrètes."
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Le guide de S12 part principalement de…",
+      "options": [
+        "Un slogan",
+        "Le plan S11",
+        "Une page vierge"
+      ],
+      "answer": 1,
+      "why": "S11 prépare l’architecture de la production."
+    },
+    {
+      "q": "Une V1 correspond à…",
+      "options": [
+        "Une première version à relire",
+        "Une validation définitive",
+        "Un fichier sans statut"
+      ],
+      "answer": 0,
+      "why": "Une V1 reste soumise au contrôle humain."
+    },
+    {
+      "q": "Une étape utile contient…",
+      "options": [
+        "Des phrases générales",
+        "Une action et un résultat à vérifier",
+        "Des promesses"
+      ],
+      "answer": 1,
+      "why": "Une action concrète est testable."
+    },
+    {
+      "q": "Si une information manque, il faut…",
+      "options": [
+        "L’inventer",
+        "La cacher",
+        "La marquer À VÉRIFIER"
+      ],
+      "answer": 2,
+      "why": "Ne jamais fabriquer de faits manquants."
+    },
+    {
+      "q": "La V2 est pertinente si…",
+      "options": [
+        "Une correction documentée existe",
+        "On a changé seulement le numéro",
+        "Le quiz est réussi"
+      ],
+      "answer": 0,
+      "why": "Il faut une modification réelle, expliquée."
+    },
+    {
+      "q": "Le public est défini pour…",
+      "options": [
+        "Rallonger le texte",
+        "Adapter les explications",
+        "Remplir une case"
+      ],
+      "answer": 1,
+      "why": "Le lecteur détermine le langage et le niveau de détail."
+    },
+    {
+      "q": "La checklist finale doit…",
+      "options": [
+        "Vérifier un résultat concret",
+        "Décorer la page",
+        "Répéter l’introduction"
+      ],
+      "answer": 0,
+      "why": "Chaque critère doit servir au lecteur."
+    },
+    {
+      "q": "L’IA dans LN-IA…",
+      "options": [
+        "Valide seule",
+        "Propose et aide à rédiger",
+        "Remplace les décisions humaines"
+      ],
+      "answer": 1,
+      "why": "La responsabilité reste humaine."
+    },
+    {
+      "q": "La trace portfolio décrit…",
+      "options": [
+        "Seulement le titre",
+        "Ce qui a été produit et corrigé",
+        "Une note inventée"
+      ],
+      "answer": 1,
+      "why": "La preuve décrit la progression réelle."
+    },
+    {
+      "q": "Quel chemin suit le guide V1 Automne ?",
+      "options": [
+        "02-prompts/guide.md",
+        "03-documents/guide-pratique-v1.md",
+        "07-portfolio/guide-v1.md"
+      ],
+      "answer": 1,
+      "why": "La structure active du Module 03 privilégie 03-documents."
+    }
+  ],
+  "checks": [
+    "Titre, public et résultat visibles",
+    "Pré-requis explicites et accessibles",
+    "Trois étapes numérotées et actionnables",
+    "Résultat contrôlable pour chaque étape",
+    "Aucune information inventée ou promesse excessive",
+    "Erreurs à éviter pertinentes",
+    "Checklist finale utilisable",
+    "Points à vérifier signalés",
+    "Version V1/V2 et journal de corrections explicites",
+    "Fichiers et preuve portfolio correctement classés"
+  ]
+};
+
+
+const $=(s,root=document)=>root.querySelector(s), $$=(s,root=document)=>Array.from(root.querySelectorAll(s));
+const esc=x=>String(x??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+const routes=[['accueil','Accueil','⌂'],['presentation','Présentation','▣'],['methode','Méthode','◇'],['demonstrations','Démonstrations','◈'],['atelier','Atelier V1 → V2','✎'],['prompts','Prompts','⌘'],['flashcards','Flashcards','▤'],['quiz','Quiz','◉'],['validation','Validation','✓'],['portfolio','Portfolio','▥'],['ressources','Ressources','↗']];
+const fields=['title','audience','goal','outcome','prereqs','step1Title','step1Actions','step1Check','step2Title','step2Actions','step2Check','step3Title','step3Actions','step3Check','errors','checklist','verify','improve','plan','note','project','revisedV2','correctionLog','lessons','portfolioAction','peerFeedback'];
+const defaults=()=>Object.fromEntries(fields.map(k=>[k,'']));
+let state=defaults();let v1Snapshot='';let selectedCase=-1;let humanReviewed=false;
+try{const x=JSON.parse(localStorage.getItem('lnia-s12-automne2026')||'null');if(x&&typeof x==='object'&&!Array.isArray(x)){state={...state,...Object.fromEntries(Object.entries(x).filter(([k,v])=>fields.includes(k)&&typeof v==='string').map(([k,v])=>[k,v.slice(0,1048576)]))};}}catch{}
+try{const meta=JSON.parse(localStorage.getItem('lnia-s12-traces')||'null');if(meta){v1Snapshot=typeof meta.v1Snapshot==='string'?meta.v1Snapshot:'';selectedCase=Number.isInteger(meta.selectedCase)&&meta.selectedCase>=0&&meta.selectedCase<DATA.cases.length?meta.selectedCase:-1;}}catch{}
+let slide=0,notes=false,flash=0,flipped=false,quizAnswers={},quizGraded=false,checkState={},feedback='';
+const persist=()=>{try{localStorage.setItem('lnia-s12-automne2026',JSON.stringify(state));localStorage.setItem('lnia-s12-traces',JSON.stringify({v1Snapshot,selectedCase}));}catch{message('Sauvegarde locale indisponible. Exportez votre travail.') }};
+const message=t=>{feedback=t;const x=$('#message');if(x){x.hidden=false;x.textContent=t;}};
+const nav=()=>{const h=location.hash.replace('#','').split('/')[0];return routes.some(r=>r[0]===h)?h:'accueil'};
+const label=(key,l,placeholder='',rows=2)=>`<label class="field"><span>${l}</span><textarea data-field="${key}" rows="${rows}" placeholder="${esc(placeholder)}">${esc(state[key])}</textarea></label>`;
+const btn=(txt,id,cls='secondary')=>`<button type="button" class="btn ${cls}" id="${id}">${txt}</button>`;
+const pageTitle=(tag,title,desc)=>`<div class="section-head"><span class="eyebrow">${tag}</span><h1>${title}</h1><p>${desc}</p></div>`;
+const localFile=(name,contents)=>{const blob=new Blob([contents],{type:'text/markdown;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500);message('Fichier téléchargé : '+name+'. Classez-le ensuite manuellement dans votre dossier LN-IA.');};
+const stamp='**Module :** 03 · Challenge 100 Jours — Relance Automne 2026\n**Séance :** 12 · lundi 2 novembre 2026 · 19h00 (Maroc)\n';
+const lines=s=>String(s||'').split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+const bullets=s=>lines(s).map(x=>'- '+x.replace(/^[-*•\d.)\s]+/,'')).join('\n')||'- [À COMPLÉTER]';
+const actions=s=>lines(s).map((v,i)=>(i+1)+'. '+v.replace(/^[-*•\d.)\s]+/,'')).join('\n')||'1. [Action à préciser]';
+const value=s=>String(s||'').trim()||'[À COMPLÉTER]';
+function guideV1(){return `# ${value(state.title)}\n\n${stamp}**Version :** V1 — À RELIRE / validation humaine requise\n**Origine :** plan S11, fiche projet S10 et note S09, si fournis\n${selectedCase>=0?'**Démonstration :** FICTIVE — NE PAS PRÉSENTER COMME DONNÉE RÉELLE\n':''}\n## Objectif du guide\n\n${value(state.goal)}\n\n## Pour qui ?\n\n${value(state.audience)}\n\n## Résultat attendu\n\n${value(state.outcome)}\n\n## Prérequis\n\n${bullets(state.prereqs)}\n\n${[1,2,3].map(i=>`## Étape ${i} — ${value(state['step'+i+'Title'])}\n\n### Actions\n\n${actions(state['step'+i+'Actions'])}\n\n### Résultat à vérifier\n\n${value(state['step'+i+'Check'])}`).join('\n\n')}\n\n## Erreurs à éviter\n\n${bullets(state.errors)}\n\n## Checklist finale\n\n${lines(state.checklist).map(s=>'- [ ] '+s.replace(/^[-*•\d.)\s]+/,'')).join('\n')||'- [ ] [Critère à préciser]'}\n\n## Points à vérifier par l’humain\n\n${bullets(state.verify)}\n\n## Prochaine amélioration\n\n${value(state.improve)}\n\n---\n**Statut documentaire :** V1 à relire. La création de ce fichier ne vaut pas validation.\n`}
+function guideV2(){return `> **VERSION V2 — À RELIRE / À VALIDER HUMAINEMENT**\n> Cette V2 est issue d'une V1 archivée. La version a été révisée par le participant ; elle n'est pas automatiquement validée.\n\n${state.revisedV2.trim()}\n\n---\n## Journal des corrections — Séance 12\n\n${bullets(state.correctionLog)}\n\n## Trace de relecture\n\nRelecture déclarée par le participant. À confirmer par le formateur.\n`}
+function productionPrompt(){return `# Prompt principal S12 — Production documentaire\n\nTu es rédacteur pédagogique pour LN-IA. À partir du PLAN S11 ci-dessous, propose une V1 de guide pratique en Markdown. Ne produis aucune information absente comme si elle était vérifiée.\n\nPLAN DE LA SÉANCE 11 :\n${value(state.plan)}\n\nCONTEXTE NOTE S09 :\n${value(state.note)}\n\nCONTEXTE FICHE S10 :\n${value(state.project)}\n\nPUBLIC : ${value(state.audience)}\nOBJECTIF : ${value(state.goal)}\nRÉSULTAT : ${value(state.outcome)}\n\nContraintes : étapes actionnables et numérotées, prérequis, erreurs à éviter, checklist, informations à vérifier, texte court, statut V1 — À RELIRE. Respecter le plan. Ne rien inventer. Signaler À VÉRIFIER. La validation reste humaine.\n`}
+function validationMd(){return `# Grille de relecture — Séance 12\n\n${stamp}**Statut :** Auto-contrôle du participant — NON CERTIFIANT\n\n${DATA.checks.map((v,i)=>`- [${checkState[i]?'x':' '}] ${v}`).join('\n')}\n\n**Décision du pilote :** À COMPLÉTER (aucune validation automatique)\n**Journal de corrections :**\n${value(state.correctionLog)}\n**Retour croisé :**\n${value(state.peerFeedback)}\n`}
+function proofMd(){return `# Preuve 12 — Guide pratique V1 / V2\n\n${stamp}**Statut :** À RELIRE / À VALIDER\n**Livrables :** 03-documents/guide-pratique-v1.md ; 03-documents/guide-pratique-v2-a-relire.md (si une V2 a été réalisée)\n**Prompts :** 02-prompts/prompt-guide-s12.md\n**Contrôle :** 03-documents/grille-relecture-s12.md\n\n## Ce que j’ai appris\n${value(state.lessons)}\n\n## Ce que j’ai produit\n${value(state.title)} — V1${state.revisedV2.trim()?' et projet de V2':''}.\n\n## Ce que j’ai réellement corrigé\n${value(state.correctionLog)}\n\n## Retour d’un autre lecteur\n${value(state.peerFeedback)}\n\n## Prochaine amélioration\n${value(state.portfolioAction||state.improve)}\n\n## Pièces à joindre manuellement\n- [ ] Guide V1\n- [ ] Guide V2, si produit\n- [ ] Prompt de production\n- [ ] Grille de relecture\n- [ ] Capture / démonstration de la production si autorisée\n\nLe candidat doit confirmer les faits et les pièces avant de diffuser cette preuve.\n`}
+function bilanMd(){return `# Bilan du Module 03 — Dossier professionnel\n\n${stamp}## Progression\n- [ ] S09 : note-cadrage-courte.md — cadrage\n- [ ] S10 : fiche-projet-v1.md — projet\n- [ ] S11 : plan-guide-pratique.md — architecture\n- [ ] S12 : guide-pratique-v1.md — réalisation\n- [ ] S12 : guide-pratique-v2-a-relire.md — correction (si nécessaire)\n- [ ] Preuves S09–S12 intégrées au portfolio\n\n## Bilan personnel\n${value(state.lessons)}\n\n## Points à vérifier et améliorer\n${value(state.portfolioAction||state.verify)}\n\n**Évaluation finale :** À DÉCIDER PAR LE PILOTE HUMAIN.\n`}
+const prompts=[
+ ['01 · Produire la V1',()=>productionPrompt()],
+ ['02 · Simplifier',()=>`Simplifie ce guide pour ${value(state.audience)} sans changer l’objectif.\n\nGUIDE :\n${value(state.revisedV2||guideV1())}\n\nRéduis les répétitions, rends les actions précises, n’invente rien. Indique les changements et les faits à vérifier. Ne certifie pas la qualité.`],
+ ['03 · Contrôle qualité',()=>`Évalue ce guide pratique V1 sans le réécrire intégralement.\n\n${guideV1()}\n\nCritères : objectif, public, prérequis, ordre des étapes, exactitude, actionnabilité, erreurs à éviter, checklist et promesses. Réponds : points solides ; corrections prioritaires ; informations à vérifier ; décision proposée : À COMPLÉTER / À SIMPLIFIER / PRÊT POUR RELECTURE. La décision finale reste humaine.`],
+ ['04 · Correction ciblée V2',()=>`Applique uniquement les corrections que j’ai validées.\n\nGUIDE V1 :\n${guideV1()}\n\nCORRECTIONS À APPLIQUER :\n${value(state.correctionLog)}\n\nProduis une proposition V2 à relire. Conserve le public et l’objectif, liste les modifications. Ne prétends pas que la V2 a été validée.`],
+ ['05 · Portfolio',()=>`Prépare une proposition de trace portfolio pour S12, sans inventer les travaux du participant.\n\nTitre : ${value(state.title)}\nCe que j’ai appris : ${value(state.lessons)}\nCorrections : ${value(state.correctionLog)}\nProchain progrès : ${value(state.portfolioAction)}\n\nFichiers attendus : 03-documents/guide-pratique-v1.md ; 07-portfolio/preuve-seance-12.md. Indique ce qui doit être confirmé par l’humain.`]
+];
+function shell(){const selected=nav();$('#app').innerHTML=`<div class="layout"><aside class="sidebar" id="sidebar"><div class="brand"><img src="data:image/webp;base64,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" alt="Logo officiel LAB-NUMÉRIQUE-IA"><div><b>LAB-NUMÉRIQUE-IA</b><small>Challenge 100 Jours · Automne 2026</small></div></div><nav aria-label="Rubriques de la séance 12">${routes.map(([r,t,i])=>`<a href="#${r}" class="navitem ${selected===r?'active':''}"><span aria-hidden="true">${i}</span>${t}</a>`).join('')}</nav><div class="side-footer"><span class="pill muted">MODULE 03 · SEMAINE 06</span><p>02 NOV 2026 · 19H00 MAROC<br><strong>GUIDE V1 → V2</strong></p></div></aside><div class="workspace"><header class="topbar"><button id="menuButton" type="button" class="iconbtn" aria-label="Afficher le menu" aria-expanded="false">☰</button><span class="mark">LN–IA <small>ATELIER S12</small></span><span class="gold-pill">LUN. 02 NOV · 19H</span></header><div id="page"></div><footer class="footer">LAB-NUMÉRIQUE-IA · Prof. Abderrahman EL HISSE <span>L’IA propose. L’humain contrôle. Le livrable prouve.</span></footer></div></div><div role="status" id="message" hidden></div>`;
+$('#menuButton').onclick=()=>{const s=$('#sidebar');s.classList.toggle('open');$('#menuButton').setAttribute('aria-expanded',s.classList.contains('open'));};$$('.navitem').forEach(a=>a.onclick=()=>$('#sidebar').classList.remove('open'));}
+function render(){shell();const page=$('#page');page.innerHTML=({accueil, presentation,methode,demonstrations,atelier,promptsPage,flashcards,quiz,validation,portfolio,ressources})[nav()==='prompts'?'promptsPage':nav()]();bind();}
+function accueil(){return `<main class="page"><div class="hero"><div class="hero-text"><div class="hero-kicker">SÉANCE 12 · ATELIER PRATIQUE · MODULE 03</div><h1>Du plan au <em>guide professionnel.</em></h1><p>Produire avec l’IA une V1 actionnable, la relire, créer une V2 corrigée et documenter chaque étape de votre progression.</p><div class="hero-actions"><a class="btn primary" href="#presentation">Voir les 22 diapositives ↗</a><a class="btn light" href="#atelier">Ouvrir l’atelier V1 → V2</a></div><div class="hero-meta">Lundi 2 novembre 2026 · 19h00 · Pilotage : Prof. Abderrahman EL HISSE</div></div><div class="hero-art" aria-hidden="true"><div class="art-back">S11<br>PLAN</div><div class="art-front"><b>GUIDE PRATIQUE</b><span>01 Comprendre</span><span>02 Préparer</span><span>03 Produire</span><span>04 Vérifier</span><span>05 Améliorer</span><strong>V1 → V2</strong></div></div></div><div class="stats">${[['22','Diapositives'],['04','Cas fictifs'],['12','Flashcards'],['10','Questions quiz']].map(([x,t])=>`<div><strong>${x}</strong><span>${t}</span></div>`).join('')}</div><section class="content-block"><div class="eyebrow">LE FIL ROUGE DU MODULE</div><h2>Quatre productions, un dossier professionnel.</h2><div class="progression">${[['S09','Note de cadrage'],['S10','Fiche projet V1'],['S11','Plan du guide'],['S12','Guide V1 et V2']].map((x,i)=>`<div class="prog ${i===3?'focus':''}"><span>${x[0]}</span><b>${x[1]}</b></div>`).join('')}</div></section><div class="twocol"><section class="panel"><h2>Votre mission pendant l’atelier</h2><p>Rédiger un guide court, relire avec des critères, expliquer les corrections et exporter vos preuves dans le portfolio.</p><ul class="checklist-simple"><li>Importer le plan S11</li><li>Rédiger au moins trois étapes actionnables</li><li>Conserver la V1, produire une V2 modifiée</li><li>Exporter grille et preuve S12</li></ul></section><section class="panel outline"><h2>Règle de qualité</h2><blockquote>« La V1 sert à exister. La correction sert à progresser. La preuve sert à valider. »</blockquote><p class="small">Aucune version ne reçoit automatiquement le statut VALIDÉ. Cette décision reste humaine.</p><a href="#methode" class="text-link">Découvrir la méthode →</a></section></div></main>`}
+function presentation(){const s=DATA.slides[slide];return `<main class="page">${pageTitle('22 DIAPOSITIVES · MODE PROJECTION','Présentation pédagogique','Navigation au clavier ← →, notes formateur et plein écran.')}
+<div class="slide-controls"><span class="pill">${String(s.num).padStart(2,'0')} / 22 · ${esc(s.axis)}</span><span class="slide-progress"><i style="width:${100*(slide+1)/22}%"></i></span>${btn('Notes formateur','toggleNotes')}${btn('Plein écran','fullScreen')}</div><section class="slide" id="slideDeck"><div class="slide-upper"><div><span class="eyebrow">MODULE 03 · SÉANCE 12</span><h2>${esc(s.title)}</h2><p class="slide-description">${esc(s.description)}</p></div><div class="slide-symbol">${String(s.num).padStart(2,'0')}</div></div><div class="slide-card-grid">${s.points.map((p,i)=>`<div class="slide-card"><span>0${i+1}</span><p>${esc(p)}</p></div>`).join('')}</div><div class="slide-bottom"><span>LAB-NUMÉRIQUE-IA</span><span>DU PLAN S11 → GUIDE V1 → CORRECTION V2</span></div></section>${notes?`<div class="speaker-note"><b>Note formateur :</b> ${esc(s.note)}</div>`:''}<div class="pager">${btn('← Précédent','prevSlide')}${btn('Suivant →','nextSlide','primary')}</div><div class="slide-dots" aria-label="Navigation par diapositives">${DATA.slides.map((p,i)=>`<button type="button" title="Diapositive ${i+1}" aria-label="Aller à la diapositive ${i+1}" data-slide="${i}" class="${i===slide?'on':''}"></button>`).join('')}</div></main>`}
+function methode(){return `<main class="page">${pageTitle('MÉTHODE LN-IA','Produire, contrôler, corriger, prouver','Une procédure reproductible pour transformer le plan S11 en guide pratique.')}
+<section class="content-block"><h2>Huit étapes de production</h2><div class="method-grid">${['Besoin réel','Cadrage','Prompt','Production V1','Contrôle humain','Correction V2','Documentation','Preuve portfolio'].map((t,i)=>`<div class="method"><b>${String(i+1).padStart(2,'0')}</b><h3>${t}</h3><p>${['Reprendre l’objectif et le public du projet.','Relire le plan S11 et ses limites.','Fournir contexte et contraintes à l’IA.','Rédiger les étapes et la checklist.','Tester, vérifier les faits et le sens.','Modifier le texte et consigner les changements.','Classer les versions et le prompt.','Ajouter une trace explicite au portfolio.'][i]}</p></div>`).join('')}</div></section><div class="twocol"><section class="panel"><h2>Guide pratique = actions vérifiables</h2><ul><li>Objectif et lecteur explicités</li><li>Prérequis et trois étapes minimum</li><li>Erreurs fréquentes et correction proposée</li><li>Checklist, points à vérifier et amélioration</li></ul></section><section class="panel"><h2>V1 et V2 : deux preuves distinctes</h2><p>La V1 est le premier guide documenté. La V2 suppose un texte réellement corrigé, un journal de changements et une relecture déclarée.</p><p class="note">Le logiciel ne décide jamais que la production est « VALIDÉE ».</p></section></div></main>`}
+function demonstrations(){return `<main class="page">${pageTitle('4 EXEMPLES FICTIFS','Observer avant de produire','Chaque cas propose un public, un résultat, trois actions et des points à vérifier.')}
+<div class="demo-grid">${DATA.cases.map((c,i)=>`<article class="panel demo-card"><span class="tag">DÉMONSTRATION ${i+1} · FICTIVE</span><h2>${esc(c.name)}</h2><p>${esc(c.goal)}</p><small>${esc(c.field)}</small><div class="demo-steps">${c.steps.map((st,j)=>`<div><b>${j+1}. ${esc(st[0])}</b><p>${esc(st[1])}</p><small>Contrôle : ${esc(st[2])}</small></div>`).join('')}</div>${btn('Utiliser ce cas dans l’atelier','loadCase'+i,'primary')}</article>`).join('')}</div><p class="note">Tous les cas sont pédagogiques. Ils ne constituent ni des procédures réelles ni des résultats d’appel à un modèle IA.</p></main>`}
+function atelier(){return `<main class="page">${pageTitle('ATELIER · PRODUCTION DOCUMENTAIRE','Mon guide V1 → V2','Complétez les rubriques, exportez la V1, réalisez une correction humaine puis exportez la V2.')}
+<div class="notice"><b>Parcours en quatre temps</b><span>1. Importer le plan S11 → 2. Structurer la V1 → 3. Corriger la V2 → 4. Conserver les preuves.</span></div><section class="panel"><h2>1 · Reprendre le dossier professionnel</h2><div class="import-grid">${[['plan','Plan S11'],['project','Fiche projet S10'],['note','Note de cadrage S09']].map(([key,t])=>`<label class="import"><span>${t}</span><input type="file" accept=".txt,.md,text/plain,text/markdown" data-import="${key}"><small>Importer un fichier .md ou .txt (taille maximale 1 Mo)</small></label>`).join('')}</div>${label('plan','Plan S11 utilisé pour préparer le guide','Collez le plan relu de la séance 11',3)}<details><summary>Voir les documents S09 et S10 importés (facultatif)</summary>${label('project','Fiche projet S10','',3)}${label('note','Note de cadrage S09','',3)}</details></section>
+<section class="panel"><h2>2 · Construire la première version V1</h2><div class="fields-grid">${label('title','Titre du guide','Ex. : Guide pour...',2)}${label('audience','Public visé','Pour qui ?',2)}${label('goal','Objectif du guide','Ce guide aide à...',2)}${label('outcome','Résultat attendu','À la fin, le lecteur pourra...',2)}</div>${label('prereqs','Prérequis — une ligne par élément','Document, outil ou connaissance nécessaire',3)}<div class="step-grid">${[1,2,3].map(i=>`<div class="step-editor"><h3>Étape ${i}</h3>${label('step'+i+'Title','Nom de l’étape','Verbe d’action',2)}${label('step'+i+'Actions','Actions — une par ligne','Action 1\nAction 2',4)}${label('step'+i+'Check','Résultat à vérifier','Comment savoir que c’est fait ?',2)}</div>`).join('')}</div><div class="fields-grid">${label('errors','Erreurs à éviter','Une erreur par ligne',3)}${label('checklist','Checklist finale','Un critère concret par ligne',3)}${label('verify','Points à vérifier par l’humain','Indiquer À VÉRIFIER si nécessaire',3)}${label('improve','Prochaine amélioration','Quelle amélioration concrète envisager ?',3)}</div><div class="editor-actions">${btn('Prévisualiser ma V1','previewV1')}${btn('Télécharger la V1 (.md)','exportV1','primary')}${btn('Exporter mon prompt','exportPrompt')}${btn('Charger un exemple fictif','sampleCase')}${btn('Vider mon formulaire','clearForm')}</div><div class="preview-block"><div class="preview-head"><strong>Aperçu Markdown — version en cours</strong><span>V1 · À RELIRE</span></div><pre id="markdownPreview" tabindex="0">${esc(guideV1())}</pre></div></section>
+<section class="panel revision"><h2>3 · Documenter les corrections et préparer la V2</h2><p>La V2 doit différer de la V1. La correction appartient au participant, pas au logiciel.</p><div class="editor-actions">${btn('Reprendre la V1 exportée comme base','prefillV2')}${btn('Copier prompt de correction','copyCorrection')}</div>${label('revisedV2','Contenu Markdown corrigé de la V2','Reprenez la V1 exportée puis MODIFIEZ réellement le texte.',8)}${label('correctionLog','Journal de corrections effectuées — une ligne par modification','Ex. : J’ai clarifié l’étape 2 ; j’ai retiré une affirmation non vérifiée.',4)}${label('peerFeedback','Retour de relecture d’un autre participant','Facultatif, à compléter uniquement si effectué',2)}<label class="checkboxline"><input type="checkbox" id="humanReview" ${humanReviewed?'checked':''}> Je déclare avoir personnellement relu et modifié le texte. Cette déclaration n’est pas une validation officielle.</label><div class="editor-actions">${btn('Télécharger la V2 corrigée','exportV2','primary')}${btn('Exporter la grille de relecture','exportReview')}</div><div class="note">V2 = <code>03-documents/guide-pratique-v2-a-relire.md</code>. Le modèle historique de l’été utilise aussi le nom <code>guide-pratique-v1-corrige.md</code>.</div></section></main>`}
+function promptsPage(){return `<main class="page">${pageTitle('5 PROMPTS CANDIDAT','Du brouillon à la preuve','Prompts inspirés des supports de l’été et adaptés au dossier professionnel Automne 2026.')}
+<div class="prompt-list">${prompts.map(([title,fn],i)=>`<section class="panel prompt-card"><div class="flexline"><h2>${title}</h2>${btn('Copier','copyPrompt'+i)}</div><pre>${esc(fn())}</pre></section>`).join('')}</div><p class="note">Ces consignes ne déclenchent aucun appel IA. Copiez-les vers votre outil choisi, puis vérifiez les réponses avant exploitation.</p></main>`}
+function flashcards(){const f=DATA.flashcards[flash];return `<main class="page">${pageTitle('12 FLASHCARDS','Réviser les idées essentielles','Retournez la carte pour lire la réponse, puis avancez.')}
+<div class="flash-area"><span class="tag">CARTE ${flash+1} / 12</span><button type="button" id="flipCard" class="flash-card" aria-label="Retourner la flashcard"><span class="eyebrow">${flipped?'RÉPONSE':'QUESTION'}</span><strong>${esc(flipped?f.a:f.q)}</strong><small>Cliquer pour retourner</small></button><div class="pager">${btn('← Carte précédente','flashPrev')}${btn('Retourner la carte','flashFlip')}${btn('Carte suivante →','flashNext','primary')}</div></div></main>`}
+function quiz(){return `<main class="page">${pageTitle('10 QUESTIONS · AUTO-ÉVALUATION','Vérifier sa compréhension','Ce quiz mesure des connaissances, pas la validité documentaire de votre guide.')}
+<div class="quiz-list">${DATA.quiz.map((q,i)=>`<fieldset class="panel quiz-question"><legend><b>${i+1}.</b> ${esc(q.q)}</legend>${q.options.map((o,j)=>`<label class="quiz-option"><input type="radio" name="q${i}" value="${j}" ${quizAnswers[i]===j?'checked':''}> ${esc(o)}</label>`).join('')}${quizGraded?`<p class="answer ${quizAnswers[i]===q.answer?'correct':'incorrect'}">${quizAnswers[i]===q.answer?'Bonne réponse':'À revoir'} — ${esc(q.why)}</p>`:''}</fieldset>`).join('')}</div><div class="editor-actions">${btn('Corriger mes réponses','gradeQuiz','primary')}${btn('Télécharger autoévaluation','exportQuiz')}${btn('Recommencer','resetQuiz')}</div>${quizGraded?`<div class="notice"><strong>Résultat : ${DATA.quiz.filter((q,i)=>quizAnswers[i]===q.answer).length}/10</strong><span>À interpréter comme autoévaluation, non comme validation du livrable.</span></div>`:''}</main>`}
+function validation(){return `<main class="page">${pageTitle('CONTRÔLE HUMAIN','Grille de relecture','Un outil pour guider le contrôle, sans attester de l’exactitude des documents.')}
+<div class="panel"><h2>Dix critères à vérifier</h2>${DATA.checks.map((t,i)=>`<label class="checkitem"><input type="checkbox" data-check="${i}" ${checkState[i]?'checked':''}><span>${esc(t)}</span></label>`).join('')}<div class="notice"><b>${Object.values(checkState).filter(Boolean).length}/10 critères cochés</b><span>Le statut reste « À RELIRE / À VALIDER » quel que soit le score.</span></div>${btn('Télécharger la grille','exportReview','primary')}</div></main>`}
+function portfolio(){return `<main class="page">${pageTitle('TRAÇABILITÉ · CAPITALISATION','Le livrable devient une preuve','L’atelier n’envoie ni formulaire ni fichier vers un serveur. Exportez vos documents et classez-les localement.')}
+<div class="twocol"><section class="panel"><h2>Preuve de la séance 12</h2>${label('lessons','Ce que j’ai appris','Décrivez un apprentissage réellement effectué',3)}${label('portfolioAction','Ce que je souhaite améliorer','Écrivez une prochaine action',3)}${btn('Télécharger la preuve S12','exportProof','primary')}</section><section class="panel"><h2>Bilan du Module 03</h2><p>Vérifiez que vos quatre séances forment un dossier cohérent. Le bilan rappelle les productions S09, S10, S11, S12 et les preuves associées.</p>${btn('Télécharger le bilan du Module 03','exportBilan','primary')}<div class="note">Ne déclarez pas des travaux non réalisés comme validés.</div></section></div><section class="panel"><h2>Classement recommandé</h2><pre class="file-tree">challenge-100jours/\n├── 02-prompts/\n│   └── prompt-guide-s12.md\n├── 03-documents/\n│   ├── note-cadrage-courte.md  (S09)\n│   ├── fiche-projet-v1.md     (S10)\n│   ├── plan-guide-pratique.md (S11)\n│   ├── guide-pratique-v1.md   (S12)\n│   ├── guide-pratique-v2-a-relire.md (S12)\n│   └── grille-relecture-s12.md\n└── 07-portfolio/\n    ├── preuve-seance-12.md\n    └── bilan-module-03.md</pre></section></main>`}
+function ressources(){return `<main class="page">${pageTitle('DOCUMENTATION ET SOURCES','Ressources & préparation','Consultez les supports et préparez la validation du Module 03.')}
+<div class="resource-grid">${[['Atelier S09','Note de cadrage','https://elhisse-clprepas.github.io/atelier-seance-09-ln-ia/'],['Atelier S10','Fiche projet V1','https://elhisse-clprepas.github.io/atelier-seance-10-ln-ia/'],['Atelier S11','Plan du guide','https://elhisse-clprepas.github.io/atelier-seance-11-ln-ia/'],['Documentation Vite','Développement et publication','https://vite.dev/guide/'],['GitHub Pages','Site et workflow de publication','https://docs.github.com/en/pages']].map(([t,sub,url])=>`<a class="panel resource" href="${url}" target="_blank" rel="noopener noreferrer"><h2>${t} ↗</h2><p>${sub}</p><small>${url}</small></a>`).join('')}</div><section class="panel"><h2>Préparation de fin de module</h2><p>Rassemblez les livrables et prouvez que vous savez passer d’un besoin à un document contrôlé. Les sources de l’été sont archivées dans le ZIP. Les affiches de S12 seront réalisées ultérieurement.</p><p><b>Déploiement cible :</b> <a target="_blank" rel="noopener noreferrer" href="https://github.com/elhisse-CLPrepas/atelier-seance-12-ln-ia">GitHub — atelier-seance-12-ln-ia</a> (publication non présumée).</p></section></main>`}
+function bind(){const route=nav();$$('[data-field]').forEach(el=>el.oninput=()=>{state[el.dataset.field]=el.value;persist();humanReviewed=false;const recheck=$('#humanReview');if(recheck)recheck.checked=false;const p=$('#markdownPreview');if(p)p.textContent=guideV1();});
+$$('[data-import]').forEach(input=>input.onchange=async()=>{const file=input.files?.[0];if(!file)return;if(file.size>1048576){message('Import refusé : limite de 1 Mo.');input.value='';return}if(!/\.(md|txt)$/i.test(file.name)){message('Import refusé : format .md ou .txt attendu.');return}const text=await file.text();state[input.dataset.import]=text;persist();render();message('Document importé localement : '+file.name);});
+$$('[data-slide]').forEach(el=>el.onclick=()=>{slide=Number(el.dataset.slide);render()});$$('[data-check]').forEach(el=>el.onchange=()=>{checkState[el.dataset.check]=el.checked;render()});
+$$('input[type=radio][name^=q]').forEach(el=>el.onchange=()=>{quizAnswers[Number(el.name.slice(1))]=Number(el.value)});
+const cb=(id,fn)=>{const e=$('#'+id);if(e)e.onclick=fn};
+cb('prevSlide',()=>{slide=(slide+21)%22;render()});cb('nextSlide',()=>{slide=(slide+1)%22;render()});cb('toggleNotes',()=>{notes=!notes;render()});cb('fullScreen',async()=>{const p=$('#slideDeck');if(!document.fullscreenElement)try{await p.requestFullscreen()}catch{message('Plein écran indisponible sur ce navigateur.')}else await document.exitFullscreen()});
+DATA.cases.forEach((c,i)=>cb('loadCase'+i,()=>{if(!loadCase(i))return;location.hash='#atelier';render();message('Exemple FICTIF chargé dans le formulaire. Remplacez-le par votre projet personnel.') }));
+cb('sampleCase',()=>{if(!loadCase(3))return;render();message('Cas pédagogique fictif chargé. Remplacez les données avant un travail réel.')});
+cb('clearForm',()=>{if(!confirm('Effacer le formulaire local de la séance 12 ? Exportez d’abord vos fichiers.'))return;state=defaults();v1Snapshot='';selectedCase=-1;humanReviewed=false;persist();render();message('Formulaire vidé.');});
+cb('previewV1',()=>{const p=$('#markdownPreview');if(p){p.textContent=guideV1();p.scrollIntoView({behavior:'smooth',block:'nearest'})}});
+cb('exportV1',()=>{const required=['title','audience','goal','outcome',...([1,2,3].flatMap(n=>['step'+n+'Title','step'+n+'Actions','step'+n+'Check']))];if(required.some(k=>!state[k].trim())){message('V1 non exportée : complétez le titre, le public, le résultat, l’objectif et les trois étapes avec leur contrôle.');return}v1Snapshot=guideV1();persist();localFile('guide-pratique-v1.md',v1Snapshot);});
+cb('exportPrompt',()=>localFile('prompt-guide-s12.md',productionPrompt()));
+cb('prefillV2',()=>{if(!v1Snapshot){message('Téléchargez d’abord la V1 pour établir la version de référence.');return}if(state.revisedV2.trim()&&!confirm('Remplacer le texte V2 actuel par la base V1 ?'))return;humanReviewed=false;state.revisedV2=v1Snapshot.replace('**Version :** V1 — À RELIRE / validation humaine requise','**Version :** V2 — À RELIRE / validation humaine requise');persist();render();message('Base V1 recopiée. Modifiez effectivement les instructions et décrivez vos corrections.')});
+cb('copyCorrection',()=>copyText(prompts[3][1]()));cb('exportV2',()=>{if(!v1Snapshot){message('V2 non exportée : téléchargez d’abord la V1.');return}if(!state.revisedV2.trim()||!state.correctionLog.trim()||!humanReviewed){message('V2 non exportée : saisissez le texte révisé, le journal de corrections et cochez la relecture humaine.');return}const ref=v1Snapshot.replace('**Version :** V1 — À RELIRE / validation humaine requise','**Version :** V2 — À RELIRE / validation humaine requise').trim();if(state.revisedV2.trim()===ref||state.revisedV2.trim()===v1Snapshot.trim()){message('V2 non exportée : aucun changement de contenu détecté. Modifiez réellement le texte avant export.');return}localFile('guide-pratique-v2-a-relire.md',guideV2())});
+cb('humanReview',()=>{});const review=$('#humanReview');if(review)review.onchange=()=>{humanReviewed=review.checked};
+cb('exportReview',()=>localFile('grille-relecture-s12.md',validationMd()));cb('exportProof',()=>localFile('preuve-seance-12.md',proofMd()));cb('exportBilan',()=>localFile('bilan-module-03.md',bilanMd()));
+prompts.forEach(([t,fn],i)=>cb('copyPrompt'+i,()=>copyText(fn())));
+cb('flashFlip',()=>{flipped=!flipped;render()});cb('flipCard',()=>{flipped=!flipped;render()});cb('flashPrev',()=>{flash=(flash+11)%12;flipped=false;render()});cb('flashNext',()=>{flash=(flash+1)%12;flipped=false;render()});
+cb('gradeQuiz',()=>{quizGraded=true;render()});cb('resetQuiz',()=>{quizAnswers={};quizGraded=false;render()});cb('exportQuiz',()=>localFile('autoevaluation-seance-12.md','# Auto-évaluation Séance 12\n\nScore : '+DATA.quiz.filter((q,i)=>quizAnswers[i]===q.answer).length+'/10\n\n'+DATA.quiz.map((q,i)=>`${i+1}. ${q.q}\nRéponse du participant : ${q.options[quizAnswers[i]]??'Non répondu'}\nAttendu : ${q.options[q.answer]}\n${q.why}`).join('\n\n')+'\n\n*Autoévaluation non certifiante.*'));
+}
+function copyText(text){if(navigator.clipboard?.writeText)navigator.clipboard.writeText(text).then(()=>message('Prompt copié dans le presse-papiers.')).catch(()=>message('Copie impossible. Sélectionnez le texte directement dans la rubrique Prompts.'));else message('Presse-papiers non disponible : sélectionnez le texte dans la rubrique Prompts.');}
+function loadCase(index){if(fields.some(k=>state[k].trim())&&!confirm('Charger cet exemple remplacera votre travail actuel. Exportez vos documents avant de continuer. Continuer ?'))return false;const c=DATA.cases[index];selectedCase=index;Object.assign(state,{title:'Guide pratique — '+c.name,audience:c.audience,goal:c.goal,outcome:c.goal,prereqs:c.prereq,errors:c.errors,checklist:c.checklist,verify:c.verify,improve:'Tester le guide avec un lecteur du public visé.',correctionLog:'',revisedV2:'',lessons:'',portfolioAction:'',peerFeedback:''});c.steps.forEach((st,i)=>{const n=i+1;state['step'+n+'Title']=st[0];state['step'+n+'Actions']=st[1];state['step'+n+'Check']=st[2]});v1Snapshot='';humanReviewed=false;persist();return true}
+window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0)});
+window.addEventListener('keydown',e=>{if(nav()!=='presentation'||/INPUT|TEXTAREA|BUTTON|SELECT/.test(document.activeElement?.tagName||''))return;if(e.key==='ArrowRight'){e.preventDefault();slide=(slide+1)%22;render()}if(e.key==='ArrowLeft'){e.preventDefault();slide=(slide+21)%22;render()}});
+render();
+</script></body></html>

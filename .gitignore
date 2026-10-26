@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.env*
+!/.env.example
+# Les sources historiques restent dans le ZIP livré, hors dépôt public.
+ressources-originales/*.zip

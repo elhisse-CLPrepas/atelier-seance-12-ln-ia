@@ -1,0 +1,17 @@
+{
+  "name": "atelier-seance-12-ln-ia",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "node scripts/verify.mjs && node --check src/main.js && node --check src/data.js",
+    "test": "node --test tests/s12.test.mjs",
+    "standalone": "python scripts/build-standalone.py"
+  },
+  "devDependencies": {
+    "vite": "6.4.5"
+  }
+}
